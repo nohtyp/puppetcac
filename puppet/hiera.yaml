@@ -3,6 +3,7 @@
   - yaml
 
 :hierarchy:
+  - "%{clientcert}"
   - common
 
 :yaml:

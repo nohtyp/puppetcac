@@ -1,0 +1,17 @@
+---
+#sudo::configs:
+#        'admins':
+#                'content'  : "%admins ALL=(ALL) NOPASSWD: ALL"
+#                'priority' : 20
+
+###########################
+## This for ssh configs. ##
+###########################
+ssh::storeconfigs_enabled: false
+
+ssh::server_options:
+        GSSAPIAuthentication: 'yes'
+        GSSAPICleanupCredentials: 'yes'
+        KerberosAuthentication: 'yes'
+        KerberosTicketCleanup: 'yes'
+        AllowGroups: 'vagrant admin'
