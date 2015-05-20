@@ -1,0 +1,17 @@
+{
+  "name": "nohtyp-smartcard",
+  "version": "0.1.0",
+  "author": "nohtyp",
+  "summary": "This module will configure linux system to use CAC authentication.",
+  "license": "Apache 2.0",
+  "source": "https://github.com/nohtyp/puppetcac",
+  "project_page": "https://github.com/nohtyp/puppetcac",
+  "issues_url": "https://github.com/nohtyp/puppetcac/issues",
+  "dependencies": [
+    {
+      "name": "puppetlabs-stdlib",
+      "version_range": ">= 1.0.0"
+    }
+  ]
+}
+
