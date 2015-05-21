@@ -10,8 +10,21 @@
 ssh::storeconfigs_enabled: false
 
 ssh::server_options:
+        Protocol: '2'
+        Port: '22'
         GSSAPIAuthentication: 'yes'
         GSSAPICleanupCredentials: 'yes'
         KerberosAuthentication: 'yes'
         KerberosTicketCleanup: 'yes'
         AllowGroups: 'vagrant admin'
+
+#############################
+## This is for resolv.conf ##
+#############################
+resolv_conf::nameservers:
+        - '10.40.57.39'
+        - '10.40.61.80'
+
+resolv_conf::searchpath:
+        - 'hq.nesdis.noaa.doc'
+        - 'familyguy.com'
