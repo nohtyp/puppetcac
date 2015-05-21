@@ -22,9 +22,9 @@ ssh::server_options:
 ## This is for resolv.conf ##
 #############################
 resolv_conf::nameservers:
-        - '10.40.57.39'
-        - '10.40.61.80'
+        - 'ip address'
+        - 'ip address2'
 
 resolv_conf::searchpath:
-        - 'hq.nesdis.noaa.doc'
+        - 'domain'
         - 'familyguy.com'
