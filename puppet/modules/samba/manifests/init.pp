@@ -1,6 +1,6 @@
-# == Class: smartcard
+# == Class: samba
 #
-# Full description of class smartcard here.
+# Full description of class samba here.
 #
 # === Parameters
 #
