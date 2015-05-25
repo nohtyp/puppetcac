@@ -1,28 +1,14 @@
 {
-  "name": "ajjahn-samba",
-  "version": "0.3.1",
-  "author": "Adam Jahn",
-  "summary": "Module for provisioning Samba",
-  "license": "Apache-2.0",
-  "source": "https://github.com/ajjahn/puppet-samba",
-  "project_page": "https://github.com/ajjahn/puppet-samba",
-  "issues_url": "https://github.com/ajjahn/puppet-samba/issues",
-  "description": "Module for provisioning Samba",
-  "operatingsystem_support": [
-    {
-      "operatingsystem": "RedHat",
-      "operatingsystemrelease": [
-        "6.0"
-      ]
-    },
-    {
-      "operatingsystem": "Ubuntu",
-      "operatingsystemrelease": [
-        "12.04"
-      ]
-    }
-  ],
+  "name": "nohtyp-samba",
+  "version": "0.1.0",
+  "author": "nohtyp",
+  "summary": "This module will manage samba for joining linux machines to Active Directory.",
+  "license": "Apache 2.0",
+  "source": "https://github.com/nohtyp/samba",
+  "project_page": "https://github.com/nohtyp/samba",
+  "issues_url": "https://github.com/nohtyp/samba/issues",
   "dependencies": [
-  
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
   ]
 }
+

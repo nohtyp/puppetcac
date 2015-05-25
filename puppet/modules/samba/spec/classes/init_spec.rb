@@ -1,7 +1,7 @@
 require 'spec_helper'
-describe 'smartcard' do
+describe 'samba' do
 
   context 'with defaults for all parameters' do
-    it { should contain_class('smartcard') }
+    it { should contain_class('samba') }
   end
 end

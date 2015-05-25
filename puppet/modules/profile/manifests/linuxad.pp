@@ -1,6 +1,6 @@
 class profile::linuxad {
   include stdlib
-  include smartcard
+  include samba
   include ssh
   include resolv_conf
   #include sudo

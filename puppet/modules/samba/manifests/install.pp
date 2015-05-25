@@ -1,4 +1,4 @@
-class smartcard::install inherits smartcard {
+class samba::install inherits samba {
   
   package { $packages:
     ensure =>  installed,

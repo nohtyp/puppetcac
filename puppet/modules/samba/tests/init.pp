@@ -1,25 +1,12 @@
-# Smoketest.
-
-class {'samba::server':
-    workgroup => 'example',
-    server_string => "Example Samba Server",
-    interfaces => "eth0 lo",
-    security => 'share'
-  }
-
-  samba::server::share {'example-share':
-    comment => 'Example Share',
-    path => '/path/to/share',
-    guest_only => true,
-    guest_ok => true,
-    guest_account => "guest",
-    browsable => false,
-    create_mask => 0777,
-    force_create_mask => 0777,
-    directory_mask => 0777,
-    force_directory_mask => 0777,
-    force_group => 'group',
-    force_user => 'user',
-    copy => 'some-other-share',
-  }
-}
+# The baseline for module testing used by Puppet Labs is that each manifest
+# should have a corresponding test manifest that declares that class or defined
+# type.
+#
+# Tests are then run by using puppet apply --noop (to check for compilation
+# errors and view a log of events) or by fully applying the test in a virtual
+# environment (to compare the resulting system state to the desired state).
+#
+# Learn more about module testing here:
+# http://docs.puppetlabs.com/guides/tests_smoke.html
+#
+include samba

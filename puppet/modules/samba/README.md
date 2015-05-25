@@ -1,88 +1,79 @@
-# Puppet Samba Module
+# samba
 
-Module for provisioning Samba
+#### Table of Contents
 
-Tested on Ubuntu 12.04, CentOS 6.3, patches to support other operating systems are welcome.
+1. [Overview](#overview)
+2. [Module Description - What the module does and why it is useful](#module-description)
+3. [Setup - The basics of getting started with samba](#setup)
+    * [What samba affects](#what-samba-affects)
+    * [Setup requirements](#setup-requirements)
+    * [Beginning with samba](#beginning-with-samba)
+4. [Usage - Configuration options and additional functionality](#usage)
+5. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
+5. [Limitations - OS compatibility, etc.](#limitations)
+6. [Development - Guide for contributing to the module](#development)
 
-## Installation
+## Overview
 
-Clone this repo to your Puppet modules directory
+A one-maybe-two sentence summary of what the module does/what problem it solves.
+This is your 30 second elevator pitch for your module. Consider including
+OS/Puppet version it works with.
 
-    git clone git://github.com/ajjahn/puppet-samba.git samba
+## Module Description
 
-or
+If applicable, this section should have a brief description of the technology
+the module integrates with and what that integration enables. This section
+should answer the questions: "What does this module *do*?" and "Why would I use
+it?"
 
-    puppet module install ajjahn/samba
+If your module has a range of functionality (installation, configuration,
+management, etc.) this is the time to mention it.
+
+## Setup
+
+### What samba affects
+
+* A list of files, packages, services, or operations that the module will alter,
+  impact, or execute on the system it's installed on.
+* This is a great place to stick any warnings.
+* Can be in list or paragraph form.
+
+### Setup Requirements **OPTIONAL**
+
+If your module requires anything extra before setting up (pluginsync enabled,
+etc.), mention it here.
+
+### Beginning with samba
+
+The very basic steps needed for a user to get the module up and running.
+
+If your most recent release breaks compatibility or requires particular steps
+for upgrading, you may wish to include an additional section here: Upgrading
+(For an example, see http://forge.puppetlabs.com/puppetlabs/firewall).
 
 ## Usage
 
-Tweak and add the following to your site manifest:
+Put the classes, types, and resources for customizing, configuring, and doing
+the fancy stuff with your module here.
 
-    node 'server.example.com' {
-      class {'samba::server':
-        workgroup => 'example',
-        server_string => "Example Samba Server",
-        interfaces => "eth0 lo",
-        security => 'share'
-      }
+## Reference
 
-      samba::server::share {'example-share':
-        comment => 'Example Share',
-        path => '/path/to/share',
-        guest_only => true,
-        guest_ok => true,
-        guest_account => "guest",
-        browsable => false,
-        create_mask => 0777,
-        force_create_mask => 0777,
-        directory_mask => 0777,
-        force_directory_mask => 0777,
-        force_group => 'group',
-        force_user => 'user',
-        copy => 'some-other-share',
-      }
-    }
+Here, list the classes, types, providers, facts, etc contained in your module.
+This section should include all of the under-the-hood workings of your module so
+people know what the module is touching on their system but don't need to mess
+with things. (We are working on automating this section!)
 
-If you want join Samba server to Active Directory. Tested on Ubuntu 12.04.
+## Limitations
 
-    node 'server.example.com' {
-      class {'samba::server':
-        workgroup => 'example',
-        server_string => "Example Samba Server",
-        interfaces => "eth0 lo",
-        security => 'ads'
-      }
+This is where you list OS compatibility, version compatibility, etc.
 
-      samba::server::share {'ri-storage':
-        comment           => 'RBTH User Storage',
-        path              => "$smb_share",
-        browsable         => true,
-        writable          => true,
-        create_mask       => 0770,
-        directory_mask    => 0770,
-      }
+## Development
 
-      class { 'samba::server::ads':
-         winbind_acct    => $::domain_admin,
-         winbind_pass    => $::admin_password,
-         realm           => 'EXAMPLE.COM',
-         nsswitch        => true,
-         target_ou       => "Nix_Mashine"
-      }
-    }
+Since your module is awesome, other users will want to play with it. Let them
+know what the ground rules for contributing are.
 
-Most configuration options are optional.
+## Release Notes/Contributors/Etc **Optional**
 
-## Contributing
-
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Added some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
-
-## License
-
-This module is released under the MIT license:
-
-* [http://www.opensource.org/licenses/MIT](http://www.opensource.org/licenses/MIT)
+If you aren't using changelog, put your release notes here (though you should
+consider using changelog). You may also add any additional sections you feel are
+necessary or important to include here. Please use the `## ` header.

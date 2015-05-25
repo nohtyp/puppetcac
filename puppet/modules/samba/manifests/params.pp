@@ -1,10 +1,10 @@
-class smartcard::params {
+class samba::params {
   
   case $::osfamily {
     'RedHat': {
       $packages = [ 'coolkey', 'esc', 'pam_pkcs11', 'pcsc-lite-ccid', 'nss-tools', 'krb5-libs', 'krb5-pkinit',
-                    'authconfig', 'krb5-workstation', 'pam_krb5', 'ntp', 'samba-winbind-krb5-locator', 'sssd',
-                    'sssd-tools', 'sssd-ad', 'samba-client', 'samba-common', 'cifs-utils', 'oddjob-mkhomedir'
+                    'authconfig', 'pam_krb5', 'ntp', 'samba-winbind-krb5-locator', 'sssd', 'sssd-tools',
+                    'sssd-ad', 'samba-client', 'cifs-utils', 'oddjob-mkhomedir', 'krb5-workstation', 'samba-common'
       ]
     }
     default: {
