@@ -11,7 +11,7 @@ ssh::server_options:
         GSSAPICleanupCredentials: 'yes'
         KerberosAuthentication: 'yes'
         KerberosTicketCleanup: 'yes'
-        AllowGroups: 'vagrant admin'
+        #AllowGroups: 'vagrant admin'
         LogLevel: 'INFO'
         MaxAuthTries: '3'
         IgnoreRhosts: 'yes'

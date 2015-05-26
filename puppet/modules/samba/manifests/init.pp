@@ -39,7 +39,7 @@ class samba (
   $packages = $samba::params::packages,
 ) inherits samba::params {
   
-  #validate_array($packages)
+validate_array($packages)
 
 anchor {'samba::begin': } ->
   class {'::samba::install':} ->
