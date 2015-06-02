@@ -36,12 +36,27 @@
 # Copyright 2015 Your name here, unless otherwise noted.
 #
 class samba (
-  $packages = $samba::params::packages,
+  $packages                     = $samba::params::packages,
+  $realm                        = $samba::params::realm,
+  $active_directory_servers     = $samba::params::active_directory_servers,
+  $home                         = $samba::params::home,
+  $default_shell                = $samba::params::default_shell,
+  $krb5kdc                      = $samba::params::krb5kdc,
+  $krb5adminserver              = $samba::params::krb5adminserver,
+  $smbworkgroup                 = $samba::params::smbworkgroup,
+  $join_user                    = $samba::params::join_user,
+  $join_user_pw                 = $samba::params::join_user_pw,
+  $mydomain                     = $samba::params::mydomain,
+
 ) inherits samba::params {
   
 validate_array($packages)
 
 anchor {'samba::begin': } ->
   class {'::samba::install':} ->
+  class {'::samba::authconfig':} ->
+  class {'::samba::config':} -> 
+  class {'::samba::join':} -> 
+  class {'::samba::keytab':} -> 
 anchor {'samba::end':}
 }
