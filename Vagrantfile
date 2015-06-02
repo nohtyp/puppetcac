@@ -1,4 +1,4 @@
-domain = 'familyguy.com'
+domain = 'familyguy.local'
 VAGRANTFILE_API_VERSION = "2"
 #VAGRANT_BOX_URL = "http://developer.nrel.gov/downloads/vagrant-boxes/CentOS-6.4-x86_64-v20130731.box"
 #VAGRANT_BOX_URL = "http://puppet-vagrant-boxes.puppetlabs.com/centos-65-x64-virtualbox-puppet.box"
