@@ -58,5 +58,8 @@ anchor {'samba::begin': } ->
   class {'::samba::config':} -> 
   class {'::samba::join':} -> 
   class {'::samba::keytab':} -> 
+  class {'::samba::service':} -> 
+  class {'::samba::filecreate':} ->
+  class {'::samba::sambacron':} ->
 anchor {'samba::end':}
 }

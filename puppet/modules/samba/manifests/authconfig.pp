@@ -6,7 +6,7 @@ class samba::authconfig inherits samba {
       --smbservers='$active_directory_servers' --winbindtemplatehomedir=$home --winbindtemplateshell=$default_shell \
       --enablekrb5 --krb5realm=$realm --krb5kdc=$krb5kdc  --krb5adminserver=$krb5adminserver \
       --enablekrb5kdcdns --enablekrb5realmdns --enablelocauthorize --enablemkhomedir --enablepamaccess --updateall",
-      unless => "wbinfo -u 2> /dev/null |grep -c $join_user",
+      unless  => "grep $join_user /tmp/adjoined",
   }
 }
 
