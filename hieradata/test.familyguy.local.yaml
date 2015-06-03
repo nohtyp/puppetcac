@@ -14,3 +14,8 @@ resolv_conf::nameservers:
 
 resolv_conf::searchpath:
         - 'familyguy.local'
+
+##############################################
+## This is testing user password with heira ##
+##############################################
+#samba::join_user_pw: 'Thomas'
