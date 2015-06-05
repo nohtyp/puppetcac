@@ -4,7 +4,8 @@ packages that are needed to get cac login working with (Redhat family OS).
 
 
 This module can now auto-join an active directory server and provide kerberos authentication between all configured hosts.  This module is
-almost finished.  I am working on CAC authentication piece.  Check back later to see this message updated.
+almost finished.  I am working on CAC authentication piece. CAC config and setup are complete.
+I have not verified puppet module for active directory cac login...check back later to see updated message.
 
 
 
@@ -25,3 +26,5 @@ GSSAPIAuthentication  yes
 GSSAPICleanupCredentials  yes      
 GSSAPIKeyExchange yes
 PasswordAuthentication no
+
+CAC config and setup are complete...have not verified puppet module for active directory cac login.
