@@ -27,6 +27,12 @@ class samba::params {
     'RedHat': {
       case $::operatingsystemmajrelease 
        { 
+        '6' : {
+          $packages = [ 'nss-tools', 'esc', 'krb5-libs', 'krb5-workstation', 'pam_krb5', 'authconfig', 'sssd', 'sssd-tools',
+                    'ccid', 'krb5-pkinit-openssl', 'oddjob-mkhomedir', 'sssd-ad', 'samba-common', 'samba-client', 'cifs-utils',
+                    'samba-winbind-krb5-locator', 'samba-winbind-clients']
+        }
+
         '7' : {
           $packages = [ 'coolkey', 'esc', 'pam_pkcs11', 'pcsc-lite-ccid', 'nss-tools', 'krb5-libs', 'krb5-pkinit',
                     'authconfig', 'pam_krb5', 'ntp', 'samba-winbind-krb5-locator', 'sssd', 'sssd-tools',
