@@ -9,8 +9,10 @@
 ## This is for resolv.conf ##
 #############################
 resolv_conf::nameservers:
-        - '192.168.2.103'
+        #- '192.168.2.103'
+        - '10.40.57.39'
         - '8.8.8.8'
 
 resolv_conf::searchpath:
-        - 'familyguy.local'
+        #- 'familyguy.local'
+        - 'hq.nesdis.noaa.doc'

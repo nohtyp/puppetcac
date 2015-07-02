@@ -13,8 +13,9 @@ ssh::server_options:
         AcceptEnv: 'XMODIFIERS'
         GSSAPIAuthentication: 'yes'
         GSSAPICleanupCredentials: 'yes'
+        GSSAPIKeyExchange: 'yes'
         ChallengeResponseAuthentication: 'no'
-        PasswordAuthentication: 'no'
+        PasswordAuthentication: 'yes'
         #AllowGroups: 'vagrant admin'
         LogLevel: 'INFO'
         MaxAuthTries: '3'
@@ -29,11 +30,11 @@ ssh::server_options:
         Banner: '/etc/issue'
         PrintMotd: 'no'
         MACS: 'hmac-sha1,hmac-sha2-256,hmac-sha2-512'
-        GSSAPIKeyExchange: 'yes'
         UsePAM: 'yes'
         X11Forwarding: 'yes'
         SyslogFacility: 'AUTHPRIV'
         AuthorizedKeysFile:      '.ssh/authorized_keys'
+        KerberosOrLocalPasswd: 'yes'
 
 ssh::client_options:
         'Host *':

@@ -9,11 +9,13 @@
 ## This is for resolv.conf ##
 #############################
 resolv_conf::nameservers:
-        - '192.168.2.103'
+        - '192.168.2.102'
+        #- '10.40.57.39'
         - '8.8.8.8'
 
 resolv_conf::searchpath:
         - 'familyguy.local'
+        #- 'hq.nesdis.noaa.doc'
 
 ##############################################
 ## This is testing user password with heira ##
