@@ -2,7 +2,6 @@ class samba::params {
   
   $realm                        = 'FAMILYGUY.LOCAL'
   $workgroup                    = 'FAMILYGUY'
-  #$workgroup                    = 'HQ'
   $active_directory_servers     = 'familyguyserver.familyguy.local'
   $home                         = "/home/%D/%U"
   $default_shell                = '/bin/bash'
