@@ -22,7 +22,7 @@ ssh::server_options:
         IgnoreRhosts: 'yes'
         HostbasedAuthentication: 'no'
         PermitRootLogin: 'no'
-        PermitEmptyPasswords: 'yes'
+        PermitEmptyPasswords: 'no'
         PermitUserEnvironment: 'no'
         Ciphers: 'aes128-ctr,aes192-ctr,aes256-ctr'
         ClientAliveInterval: '1800'
