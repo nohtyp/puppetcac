@@ -7,4 +7,12 @@ class samba::service inherits samba {
     hasrestart  => true,
     subscribe   => [ File_line['AD samba kerberos secrets and keytab'], File_line['AD samba kerberos refresh tickets']],
   }
+  service { 'Samba-SMB':
+    ensure      => 'running',
+    name        => 'smb',
+    enable      => true,
+    hasstatus   => true,
+    hasrestart  => true,
+    subscribe   => [ File_line['AD samba kerberos secrets and keytab'], File_line['AD samba kerberos refresh tickets']],
+  }
 }
