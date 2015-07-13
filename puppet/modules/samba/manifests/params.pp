@@ -22,6 +22,7 @@ class samba::params {
           $packages = [ 'nss-tools', 'esc', 'krb5-libs', 'krb5-workstation', 'pam_krb5', 'authconfig', 'sssd', 'sssd-tools',
                     'ccid', 'krb5-pkinit-openssl', 'oddjob-mkhomedir', 'sssd-ad', 'samba-common', 'samba-client', 'cifs-utils',
                     'samba-winbind-krb5-locator', 'samba-winbind-clients']
+          $samba_services = [ 'winbind']
         }
 
         '7' : {
@@ -29,6 +30,7 @@ class samba::params {
                     'authconfig', 'pam_krb5', 'ntp', 'samba-winbind-krb5-locator', 'sssd', 'sssd-tools',
                     'sssd-ad', 'samba-client', 'cifs-utils', 'oddjob-mkhomedir', 'krb5-workstation', 'samba-common',
                     'realmd', 'samba', 'samba-winbind-clients']
+          $samba_services = [ 'winbind', 'smb']
         }
        }
     }
