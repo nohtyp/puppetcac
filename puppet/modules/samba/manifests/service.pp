@@ -1,7 +1,6 @@
 class samba::service inherits samba {
-  service { 'Samba-Services':
+  service { $samba_services:
     ensure      => 'running',
-    name        => $samba_services,
     enable      => true,
     hasstatus   => true,
     hasrestart  => true,
