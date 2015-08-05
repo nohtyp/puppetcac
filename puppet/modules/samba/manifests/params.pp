@@ -1,18 +1,17 @@
 class samba::params {
   
-  $realm                        = 'HQ.NESDIS.NOAA.DOC'
-  $workgroup                    = 'HQ'
-  $active_directory_servers     = 'hq-vtl-dc.hq.nesdis.noaa.doc'
+  $realm                        = 'FAMILYGUY.LOCAL'
+  $workgroup                    = 'FAMILYGUY'
+  $active_directory_servers     = 'familyguyserver.familyguy.local'
   $home                         = "/home/%D/%U"
   $default_shell                = '/bin/bash'
-  $krb5kdc                      = 'hq-vtl-dc.hq.nesdis.noaa.doc'
-  $krb5adminserver              = 'hq-vtl-dc.hq.nesdis.noaa.doc'
-  $smbworkgroup                 = 'HQ'
-  $join_user                    = 'aduser'
-  $join_user_pw                 = '@ct1v3D1reCt0ryU5er13!'
-  $mydomain                     = 'hq.nesdis.noaa.doc'
-  $ou                           = 'hq_nsof_vtl/vtl_admins_vms/linux'
-
+  $krb5kdc                      = 'familyguyserver.familyguy.local'
+  $krb5adminserver              = 'familyguyserver.familyguy.local'
+  $smbworkgroup                 = 'FAMILYGUY'
+  $join_user                    = 'test'
+  $join_user_pw                 = '!QAZXCDe3#'
+  $mydomain                     = 'familyguy.local'
+  $ou                           = 'Linux/test\ ou'
   
   case $::osfamily {
     'RedHat': {
