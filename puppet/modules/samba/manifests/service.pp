@@ -1,7 +1,6 @@
 class samba::service inherits samba {
-  service { 'Samba-Winbind':
+  service { $samba_services:
     ensure      => 'running',
-    name        => 'winbind',
     enable      => true,
     hasstatus   => true,
     hasrestart  => true,

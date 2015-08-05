@@ -47,6 +47,7 @@ class samba (
   $join_user                    = $samba::params::join_user,
   $join_user_pw                 = $samba::params::join_user_pw,
   $mydomain                     = $samba::params::mydomain,
+  $samba_services		= $samba::params::samba_services,
   $ou                           = $samba::params::ou,
 
 ) inherits samba::params {
